@@ -1,6 +1,8 @@
 $$
 % GENERAL UTILITIES
 \newcommand{\defeq}{\mathrel{\mathop:}=}
+\newcommand{\union}{\cup}
+\newcommand{\Nats}{\mathbb{N}}
 
 % Parentheses and stuff
 \newcommand{\pr}[1]{\left( #1 \right)}
@@ -11,6 +13,9 @@ $$
 \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
 \newcommand{\set}[1]{\left\lbrace #1 \right\rbrace}
 \newcommand{\where}{\ \middle|\ }
+
+% Intervals
+\newcommand{\cc}[2]{\left[ #1,#2 \right]}
 
 % Functions
 \newcommand{\func}[2]{\operatorname{#1}\,#2}
@@ -85,5 +90,8 @@ $$
 \newcommand{\pprm}{^{\prime\prime}}
 
 
-% QUESTION-SPECIFIC
+% ALGORITHMS AND DATA STRUCTURES
+\newcommand{\arr}[1]{\left[ #1 \right]}
+\newcommand{\idx}[1]{\mathopen{}\left[ #1 \right]\mathclose{}}
+\newcommand{\idxr}[2]{\idx{#1\ ..\ #2}}
 $$

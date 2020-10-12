@@ -6,9 +6,9 @@ I'm slowly amassing a huge list of course-related commands that make it faster t
 
 At the moment this library supports the following University of Waterloo courses:
 
-* MATH 235 (taken online, fall 2020)
-* CS 341 (taken online, fall 2020)
-* *coming soon*: CS 370 (taken online, fall 2020)
+* MATH 235 - Linear Algebra 2 (taken online, fall 2020)
+* CS 341 - Algorithms (taken online, fall 2020)
+* *coming soon*: CS 370 - Numerical Computation (taken online, fall 2020)
 
 Eventually the library will probably get to the point where having multiple courses in the same copypasta will lead to conflicts... when that day comes I'll just split it into smaller copypastas.
 
