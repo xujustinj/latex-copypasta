@@ -91,6 +91,7 @@ $$
 \newcommand{\matrix}[1]{{\begin{bmatrix} #1 \end{bmatrix}}}
     \newcommand{\mat}{\matrix}
 \newcommand{\vector}{\matrix}
+	\newcommand{\vect}{\vector}
 \newcommand{\diagonal}{\parfunc{diag}}
     \newcommand{\diag}{\diagonal}
 \newcommand{\trace}{\parfunc{tr}}
