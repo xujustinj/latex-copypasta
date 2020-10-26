@@ -33,24 +33,59 @@ $$
 % GENERAL UTILITIES ============================================================
 
 % Left/Right aliases -----------------------------------------------------------
+\newcommand{\tuple}{\pr}
 \newcommand{\array}{\sq}
     \newcommand{\arr}{\sq}
-\newcommand{\index}[1]{\mathopen{} \sq{ #1 } \mathclose{}}
-    \newcommand{\idx}{\index}
 \newcommand{\set}{\cb}
 \newcommand{\abs}{\vv}
 \newcommand{\size}{\vv}
+\newcommand{\modulus}{\vv}
 \newcommand{\norm}{\VV}
 \newcommand{\length}{\VV}
 \newcommand{\floor}{\fl}
 \newcommand{\ceiling}{\cl}
     \newcommand{\ceil}{\cl}
 
-% Miscellaneous-----------------------------------------------------------------
+% Miscellaneous ----------------------------------------------------------------
 \newcommand{\defequals}{\mathrel{\mathop:}=}
     \newcommand{\defeq}{\defequals}
     \newcommand{\deq}{\defequals}
+\newcommand{\pair}[2]{\tuple{ #1 , #2 }}
 \newcommand{\range}[2]{{ #1 }\,{..}\,{ #2 }}
+\newcommand{\index}[1]{\mathopen{} \sq{ #1 } \mathclose{}}
+    \newcommand{\idx}{\index}
+    
+
+% COMPLEX NUMBERS ==============================================================
+
+% Miscellaneous ----------------------------------------------------------------
+\newcommand{\conjugate}[1]{\overline{#1}}
+	\newcommand{\conj}{\conjugate}
+\newcommand{\Realpart}{\parfunc{Re}}
+	\newcommand{\Re}{\Realpart}
+\newcommand{\Imaginarypart}{\parfunc{Im}}
+	\newcommand{\Im}{\Imaginarypart}
+	
+	
+% FLOATING POINT ===============================================================
+
+% Miscellaneous ----------------------------------------------------------------
+\newcommand{\float}{{fl}\par}
+	\newcommand{\fl}{\float}
+\newcommand{\repeat}[1]{\overline{ #1 }}
+	\newcommand{\rep}{\repeat}
+\newcommand{\machineepsilon}{\epsilon_{\mathit{mach}}}
+	\newcommand{\emach}{\machineepsilon}
+	
+% Operators --------------------------------------------------------------------
+\newcommand{\fplus}{\oplus}
+	\newcommand{\fadd}{\fplus}
+\newcommand{\fminus}{\ominus}
+	\newcommand{\fsub}{\fminus}
+\newcommand{\ftimes}{\otimes}
+	\newcommand{\fmul}{\ftimes}
+\newcommand{\fdivide}{\oslash}
+	\newcommand{\fdiv}{\fdivide}
 
 
 % SETS =========================================================================
@@ -60,14 +95,19 @@ $$
 
 % Common sets ------------------------------------------------------------------
 \newcommand{\Naturals}{\mathbb{N}}
-\newcommand{\Nats}{\Naturals}
-\newcommand{\N}{\Naturals}
+	\newcommand{\Nats}{\Naturals}
+	\newcommand{\N}{\Naturals}
+\newcommand{\Integers}{\mathbb{Z}}
+	\newcommand{\Ints}{\Integers}
+	\newcommand{\Z}{\Integers}
 \newcommand{\Reals}{\mathbb{R}}
-\newcommand{\R}{\Reals}
+	\newcommand{\R}{\Reals}
+\newcommand{\Complex}{\mathbb{C}}
+	\newcommand{\C}{\Complex}
 \newcommand{\Polynomials}[2]{P_{ #1 }\par{ #2 }}
-\newcommand{\Nomials}{\Polynomials}
+	\newcommand{\Nomials}{\Polynomials}
 \newcommand{\Matrices}[3]{\mathbb{M}_{ #1 , #2 }\par{ #3 }}
-\newcommand{\Mats}{\Matrices}
+    \newcommand{\Mats}{\Matrices}
 
 % Intervals --------------------------------------------------------------------
 \newcommand{\cc}[2]{\left[ #1 , #2 \right]} % Closed-Closed
@@ -96,9 +136,9 @@ $$
     \newcommand{\diag}{\diagonal}
 \newcommand{\trace}{\parfunc{tr}}
     \newcommand{\tr}{\trace}
-\newcommand{\inverse}[1]{{ #1 }^{-1}}
+\newcommand{\inverse}[1]{#1^{-1}}
     \newcommand{\inv}{\inverse}
-\newcommand{\transpose}[1]{{ #1 }^{T}}
+\newcommand{\transpose}[1]{#1^{T}}
     \newcommand{\trans}{\transpose}
 
 % Matrix subspaces -------------------------------------------------------------
@@ -144,7 +184,6 @@ $$
 
 % Common linear algebra variables ----------------------------------------------
 \newcommand{\B}{\mathcal{B}}
-\newcommand{\C}{\mathcal{C}}
 \newcommand{\V}{\mathbb{V}}
 \newcommand{\W}{\mathbb{W}}
 \newcommand{\e}{\vec{e}}

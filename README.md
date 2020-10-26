@@ -4,11 +4,11 @@ This term I switched to writing notes and assignments in Markdown (Typora). It h
 
 I'm slowly amassing a huge list of course-related commands that make it faster to type notes and assignments without worrying about typesetting. [`copypasta.md`](https://raw.githubusercontent.com/xujustinj/Typora-LaTeX-Copypasta/main/copypasta.md) contains all the commands I have so far, wrapped in a single math block that can be nestled invisibly at the top of any document. Use it as a template for starting new note and assignment documents.
 
-At the moment this library supports the following University of Waterloo courses:
+At the moment this library is being developed for the following University of Waterloo courses:
 
-* MATH 235 - Linear Algebra 2 (taken online, fall 2020)
-* CS 341 - Algorithms (taken online, fall 2020)
-* *coming soon*: CS 370 - Numerical Computation (taken online, fall 2020)
+* MATH 235 - Linear Algebra 2 (online, fall 2020)
+* CS 341 - Algorithms (online, fall 2020)
+* CS 370 - Numerical Computation (online, fall 2020)
 
 Eventually the library will probably get to the point where having multiple courses in the same copypasta will lead to conflicts... when that day comes I'll just split it into smaller copypastas.
 
