@@ -54,38 +54,39 @@ $$
 \newcommand{\range}[2]{{ #1 }\,{..}\,{ #2 }}
 \newcommand{\index}[1]{\mathopen{} \sq{ #1 } \mathclose{}}
     \newcommand{\idx}{\index}
-    
+\newcommand{\divides}{\mid}
+
 
 % COMPLEX NUMBERS ==============================================================
 
 % Miscellaneous ----------------------------------------------------------------
 \newcommand{\conjugate}[1]{\overline{#1}}
-	\newcommand{\conj}{\conjugate}
+    \newcommand{\conj}{\conjugate}
 \newcommand{\Realpart}{\parfunc{Re}}
-	\newcommand{\Re}{\Realpart}
+    \newcommand{\Re}{\Realpart}
 \newcommand{\Imaginarypart}{\parfunc{Im}}
-	\newcommand{\Im}{\Imaginarypart}
-	
-	
+    \newcommand{\Im}{\Imaginarypart}
+
+
 % FLOATING POINT ===============================================================
 
 % Miscellaneous ----------------------------------------------------------------
 \newcommand{\float}{{fl}\par}
-	\newcommand{\fl}{\float}
+    \newcommand{\fl}{\float}
 \newcommand{\repeat}[1]{\overline{ #1 }}
-	\newcommand{\rep}{\repeat}
+    \newcommand{\rep}{\repeat}
 \newcommand{\machineepsilon}{\epsilon_{\mathit{mach}}}
-	\newcommand{\emach}{\machineepsilon}
-	
+    \newcommand{\emach}{\machineepsilon}
+
 % Operators --------------------------------------------------------------------
 \newcommand{\fplus}{\oplus}
-	\newcommand{\fadd}{\fplus}
+    \newcommand{\fadd}{\fplus}
 \newcommand{\fminus}{\ominus}
-	\newcommand{\fsub}{\fminus}
+    \newcommand{\fsub}{\fminus}
 \newcommand{\ftimes}{\otimes}
-	\newcommand{\fmul}{\ftimes}
+    \newcommand{\fmul}{\ftimes}
 \newcommand{\fdivide}{\oslash}
-	\newcommand{\fdiv}{\fdivide}
+    \newcommand{\fdiv}{\fdivide}
 
 
 % SETS =========================================================================
@@ -95,17 +96,17 @@ $$
 
 % Common sets ------------------------------------------------------------------
 \newcommand{\Naturals}{\mathbb{N}}
-	\newcommand{\Nats}{\Naturals}
-	\newcommand{\N}{\Naturals}
+    \newcommand{\Nats}{\Naturals}
+    \newcommand{\N}{\Naturals}
 \newcommand{\Integers}{\mathbb{Z}}
-	\newcommand{\Ints}{\Integers}
-	\newcommand{\Z}{\Integers}
+    \newcommand{\Ints}{\Integers}
+    \newcommand{\Z}{\Integers}
 \newcommand{\Reals}{\mathbb{R}}
-	\newcommand{\R}{\Reals}
+    \newcommand{\R}{\Reals}
 \newcommand{\Complex}{\mathbb{C}}
-	\newcommand{\C}{\Complex}
+    \newcommand{\C}{\Complex}
 \newcommand{\Polynomials}[2]{P_{ #1 }\par{ #2 }}
-	\newcommand{\Nomials}{\Polynomials}
+    \newcommand{\Nomials}{\Polynomials}
 \newcommand{\Matrices}[3]{\mathbb{M}_{ #1 , #2 }\par{ #3 }}
     \newcommand{\Mats}{\Matrices}
 
@@ -118,6 +119,8 @@ $$
 % Set operations ---------------------------------------------------------------
 \newcommand{\union}{\cup}
 \newcommand{\intersect}{\cap}
+\newcommand{\directsum}{\oplus}
+    \newcommand{\dsum}{\directsum}
 
 
 % LINEAR ALGEBRA ===============================================================
@@ -131,7 +134,7 @@ $$
 \newcommand{\matrix}[1]{{\begin{bmatrix} #1 \end{bmatrix}}}
     \newcommand{\mat}{\matrix}
 \newcommand{\vector}{\matrix}
-	\newcommand{\vect}{\vector}
+    \newcommand{\vect}{\vector}
 \newcommand{\diagonal}{\parfunc{diag}}
     \newcommand{\diag}{\diagonal}
 \newcommand{\trace}{\parfunc{tr}}
@@ -150,7 +153,7 @@ $$
 \newcommand{\Nullspace}{\parfunc{Null}}
     \newcommand{\Null}{\Nullspace}
 \newcommand{\LNullspace}[1]{\Nullspace{\trans{ #1 }}}
-    \newcommand{\LNull}{\Lnullspace}
+    \newcommand{\LNull}{\LNullspace}
 
 % Linear mappings --------------------------------------------------------------
 \newcommand{\Range}{\parfunc{Range}}
@@ -184,8 +187,11 @@ $$
 
 % Common linear algebra variables ----------------------------------------------
 \newcommand{\B}{\mathcal{B}}
+\newcommand{\U}{\mathbb{U}}
 \newcommand{\V}{\mathbb{V}}
 \newcommand{\W}{\mathbb{W}}
+\newcommand{\a}{\vec{a}}
+\newcommand{\b}{\vec{b}}
 \newcommand{\e}{\vec{e}}
 \newcommand{\u}{\vec{u}}
 \newcommand{\v}{\vec{v}}
@@ -202,4 +208,29 @@ $$
 \newcommand{\ddx}[1]{\frac{d}{dx}\par{ #1 }}
 \newcommand{\prm}{^\prime}
 \newcommand{\pprm}{^{\prime\prime}}
+
+
+% GRAPHS =======================================================================
+
+% Notation
+\newcommand{\edge}{\pair}
+
+% Vertices
+\newcommand{\degree}{\parfunc{deg}}
+    \newcommand{\deg}{\degree}
+\newcommand{\indegree}{\parfunc{indegree}}
+    \newcommand{\indeg}{\indegree}
+    \newcommand{\ideg}{\indegree}
+\newcommand{\outdegree}{\parfunc{outdegree}}
+    \newcommand{\outdeg}{\outdegree}
+    \newcommand{\odeg}{\outdegree}
+
+% Trees
+\newcommand{\BFS}{\parfunc{BFS}}
+\newcommand{\DFS}{\parfunc{DFS}}
+\newcommand{\level}{\parfunc{level}}
+\newcommand{\parent}{\parfunc{parent}}
+
+% Weighted Graphs
+\newcommand{\weight}{w\par}
 $$
