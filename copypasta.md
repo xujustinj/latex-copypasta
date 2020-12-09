@@ -19,12 +19,14 @@ $$
 
 % Functions --------------------------------------------------------------------
 \newcommand{\par}[1]{\mathopen{} \pr{ #1 } \mathclose{}} % PARameter
-\newcommand{\func}[1]{\operatorname{ #1 }\,}
-\newcommand{\funcsub}[2]{\operatorname{ #1 }_{ #2 }\,}
-\newcommand{\parfunc}[1]{\operatorname{ #1 }\par}
-\newcommand{\parfuncsub}[2]{\operatorname{ #1 }_{ #2 }\par}
+\newcommand{\func}[2][]{\operatorname{ #2 }_{ #1 }\,}
+\newcommand{\parfunc}[2][]{\operatorname{ #2 }_{ #1 }\par}
+
+% Aligned ----------------------------------------------------------------------
+\newcommand{\align}[1]{\begin{aligned} #1 \end{aligned}}
 
 % Cases ------------------------------------------------------------------------
+\newcommand{\cases}[1]{\begin{cases} #1 \end{cases}}
 \newcommand{\if}[1]{\text{if \( #1 \)}}
 \newcommand{\otherwise}{\text{otherwise}}
     \newcommand{\ow}{\otherwise}
@@ -62,9 +64,9 @@ $$
 % Miscellaneous ----------------------------------------------------------------
 \newcommand{\conjugate}[1]{\overline{#1}}
     \newcommand{\conj}{\conjugate}
-\newcommand{\Realpart}{\parfunc{Re}}
+\newcommand{\Realpart}[1][]{\parfunc[#1]{Re}}
     \newcommand{\Re}{\Realpart}
-\newcommand{\Imaginarypart}{\parfunc{Im}}
+\newcommand{\Imaginarypart}[1][]{\parfunc[#1]{Im}}
     \newcommand{\Im}{\Imaginarypart}
 
 
@@ -72,7 +74,7 @@ $$
 
 % Miscellaneous ----------------------------------------------------------------
 \newcommand{\float}{{fl}\par}
-    \newcommand{\fl}{\float}
+    % \newcommand{\fl}{\float} name conflict with floor
 \newcommand{\repeat}[1]{\overline{ #1 }}
     \newcommand{\rep}{\repeat}
 \newcommand{\machineepsilon}{\epsilon_{\mathit{mach}}}
@@ -107,7 +109,7 @@ $$
     \newcommand{\C}{\Complex}
 \newcommand{\Polynomials}[2]{P_{ #1 }\par{ #2 }}
     \newcommand{\Nomials}{\Polynomials}
-\newcommand{\Matrices}[3]{\mathbb{M}_{ #1 , #2 }\par{ #3 }}
+\newcommand{\Matrices}[3]{M_{ #1 , #2 }\par{ #3 }}
     \newcommand{\Mats}{\Matrices}
 
 % Intervals --------------------------------------------------------------------
@@ -118,7 +120,9 @@ $$
 
 % Set operations ---------------------------------------------------------------
 \newcommand{\union}{\cup}
+\newcommand{\Union}{\bigcup}
 \newcommand{\intersect}{\cap}
+\newcommand{\Intersect}{\bigcap}
 \newcommand{\directsum}{\oplus}
     \newcommand{\dsum}{\directsum}
 
@@ -126,40 +130,43 @@ $$
 % LINEAR ALGEBRA ===============================================================
 
 % Bases ------------------------------------------------------------------------
-\newcommand{\Span}{\func{Span}}
-\newcommand{\rank}{\parfunc{rank}}
-\newcommand{\dim}{\parfunc{dim}}
+\newcommand{\Span}[1][]{\func[#1]{Span}}
+\newcommand{\rank}[1][]{\parfunc[#1]{rank}}
+\newcommand{\dim}[1][]{\parfunc[#1]{dim}}
 
 % Matrices ---------------------------------------------------------------------
 \newcommand{\matrix}[1]{{\begin{bmatrix} #1 \end{bmatrix}}}
     \newcommand{\mat}{\matrix}
 \newcommand{\vector}{\matrix}
     \newcommand{\vect}{\vector}
-\newcommand{\diagonal}{\parfunc{diag}}
+\newcommand{\diagonal}[1][]{\parfunc[#1]{diag}}
     \newcommand{\diag}{\diagonal}
-\newcommand{\trace}{\parfunc{tr}}
+\newcommand{\trace}[1][]{\parfunc[#1]{tr}}
     \newcommand{\tr}{\trace}
 \newcommand{\inverse}[1]{#1^{-1}}
     \newcommand{\inv}{\inverse}
 \newcommand{\transpose}[1]{#1^{T}}
     \newcommand{\trans}{\transpose}
+\newcommand{\conjtrans}[1]{#1^{*}}
+	\newcommand{\conjt}{\conjtrans}
+	\newcommand{\ctrans}{\conjtrans}
 
 % Matrix subspaces -------------------------------------------------------------
-\newcommand{\Columnspace}{\parfunc{Col}}
+\newcommand{\Columnspace}[1][]{\parfunc[#1]{Col}}
     \newcommand{\Colspace}{\Columnspace}
     \newcommand{\Col}{\Columnspace}
-\newcommand{\Rowspace}{\parfunc{Row}}
+\newcommand{\Rowspace}[1][]{\parfunc[#1]{Row}}
     \newcommand{\Row}{\Rowspace}
-\newcommand{\Nullspace}{\parfunc{Null}}
+\newcommand{\Nullspace}[1][]{\parfunc[#1]{Null}}
     \newcommand{\Null}{\Nullspace}
-\newcommand{\LNullspace}[1]{\Nullspace{\trans{ #1 }}}
+\newcommand{\LNullspace}[2][]{\Nullspace[#1]{\trans{ #2 }}}
     \newcommand{\LNull}{\LNullspace}
 
 % Linear mappings --------------------------------------------------------------
-\newcommand{\Range}{\parfunc{Range}}
-\newcommand{\Kernel}{\parfunc{Ker}}
+\newcommand{\Range}[1][]{\parfunc[#1]{Range}}
+\newcommand{\Kernel}[1][]{\parfunc[#1]{Ker}}
     \newcommand{\Ker}{\Kernel}
-\newcommand{\nullity}{\parfunc{nullity}}
+\newcommand{\nullity}[1][]{\parfunc[#1]{nullity}}
 
 % Coordinates ------------------------------------------------------------------
 \newcommand{\coordinates}[2]{\matrix{ #1 }_{ #2 }}
@@ -176,9 +183,9 @@ $$
 \newcommand{\innerproduct}[2]{\ag{ #1 , #2 }}
     \newcommand{\innerprod}{\innerproduct}
     \newcommand{\iprod}{\innerproduct}
-\newcommand{\projection}{\parfuncsub{proj}}
+\newcommand{\projection}[1]{\parfunc[#1]{proj}}
     \newcommand{\proj}{\projection}
-\newcommand{\perpendicular}{\parfuncsub{perp}}
+\newcommand{\perpendicular}[1]{\parfunc[#1]{perp}}
     \newcommand{\perp}{\perpendicular}
 \newcommand{\orthogonalcomplement}[1]{{ #1 }^{\bot}}
     \newcommand{\orthocomplement}{\orthogonalcomplement}
@@ -205,7 +212,8 @@ $$
 % CALCULUS =====================================================================
 
 % Derivative notations
-\newcommand{\ddx}[1]{\frac{d}{dx}\par{ #1 }}
+\newcommand{\dd}[3][]{\frac{d^{#1} {#2}}{d {#3}^{#1}}}
+\newcommand{\pdd}[3][]{\frac{\delta^{#1} {#2}}{\delta {#3}^{#1}}}
 \newcommand{\prm}{^\prime}
 \newcommand{\pprm}{^{\prime\prime}}
 
@@ -216,21 +224,54 @@ $$
 \newcommand{\edge}{\pair}
 
 % Vertices
-\newcommand{\degree}{\parfunc{deg}}
+\newcommand{\degree}[1][]{\parfunc[#1]{deg}}
     \newcommand{\deg}{\degree}
-\newcommand{\indegree}{\parfunc{indegree}}
+\newcommand{\indegree}[1][]{\parfunc[#1]{indegree}}
     \newcommand{\indeg}{\indegree}
     \newcommand{\ideg}{\indegree}
-\newcommand{\outdegree}{\parfunc{outdegree}}
+\newcommand{\outdegree}[1][]{\parfunc[#1]{outdegree}}
     \newcommand{\outdeg}{\outdegree}
     \newcommand{\odeg}{\outdegree}
 
 % Trees
-\newcommand{\BFS}{\parfunc{BFS}}
-\newcommand{\DFS}{\parfunc{DFS}}
-\newcommand{\level}{\parfunc{level}}
-\newcommand{\parent}{\parfunc{parent}}
+\newcommand{\BFS}[1][]{\parfunc[#1]{BFS}}
+\newcommand{\DFS}[1][]{\parfunc[#1]{DFS}}
+\newcommand{\level}[1][]{\parfunc[#1]{level}}
+\newcommand{\parent}[1][]{\parfunc[#1]{parent}}
 
 % Weighted Graphs
 \newcommand{\weight}{w\par}
+
+% Paths
+\newcommand{\distance}[2]{d\par{ #1 , #2 }}
+	\newcommand{\dist}{\distance}
+
+
+% ALGORITHMS ===================================================================
+
+% Decision Problems
+\newcommand{\YES}{\text{YES}}
+\newcommand{\NO}{\text{NO}}
+
+% Complexity Classes
+\newcommand{\reducesto}[1][]{\leq_{#1}}
+\newcommand{\P}{\text{P}}
+\newcommand{\NP}{\text{NP}}
+\newcommand{\SAT}{\text{SAT}}
+
+
+% LOGIC ========================================================================
+
+% Values
+\newcommand{\true}{\text{true}}
+\newcommand{\True}{\text{True}}
+\newcommand{\TRUE}{\text{True}}
+\newcommand{\false}{\text{false}}
+\newcommand{\False}{\text{False}}
+\newcommand{\FALSE}{\text{FALSE}}
+
+% Operators
+\newcommand{\AND}{\land}
+\newcommand{\OR}{\lor}
+\newcommand{\NOT}{\lnot}
 $$
