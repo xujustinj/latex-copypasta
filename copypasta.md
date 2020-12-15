@@ -150,6 +150,7 @@ $$
 \newcommand{\conjtrans}[1]{#1^{*}}
 	\newcommand{\conjt}{\conjtrans}
 	\newcommand{\ctrans}{\conjtrans}
+	\newcommand{\ct}{\conjtrans}
 
 % Matrix subspaces -------------------------------------------------------------
 \newcommand{\Columnspace}[1][]{\parfunc[#1]{Col}}
@@ -216,6 +217,14 @@ $$
 \newcommand{\pdd}[3][]{\frac{\delta^{#1} {#2}}{\delta {#3}^{#1}}}
 \newcommand{\prm}{^\prime}
 \newcommand{\pprm}{^{\prime\prime}}
+
+% Trigonometry
+\newcommand{\cosp}[1][]{\cos^{#1}\par}
+\newcommand{\sinp}[1][]{\sin^{#1}\par}
+\newcommand{\tanp}[1][]{\tan^{#1}\par}
+\newcommand{\secp}[1][]{\sec^{#1}\par}
+\newcommand{\cscp}[1][]{\csc^{#1}\par}
+\newcommand{\cotp}[1][]{\cot^{#1}\par}
 
 
 % GRAPHS =======================================================================
