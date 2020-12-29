@@ -31,6 +31,9 @@ $$
 \newcommand{\otherwise}{\text{otherwise}}
     \newcommand{\ow}{\otherwise}
 
+% Slash Fraction ---------------------------------------------------------------
+\newcommand{\flac}[2]{\left. #1 \middle/ #2 \right.}
+
 
 % GENERAL UTILITIES ============================================================
 
@@ -218,6 +221,10 @@ $$
 \newcommand{\prm}{^\prime}
 \newcommand{\pprm}{^{\prime\prime}}
 
+% Logarithms
+\newcommand{\lnp}{\ln\par}
+\newcommand{\logp}[1][]{\log_{#1}\par}
+
 % Trigonometry
 \newcommand{\cosp}[1][]{\cos^{#1}\par}
 \newcommand{\sinp}[1][]{\sin^{#1}\par}
@@ -231,6 +238,7 @@ $$
 
 % Notation
 \newcommand{\edge}{\pair}
+\newcommand{\graph}{\pair}
 
 % Vertices
 \newcommand{\degree}[1][]{\parfunc[#1]{deg}}
@@ -258,6 +266,13 @@ $$
 
 % ALGORITHMS ===================================================================
 
+% Big O Notation
+\newcommand{\Oh}{O\par}
+\newcommand{\oh}{o\par}
+\newcommand{\Om}{\Omega\par}
+\newcommand{\om}{\omega\par}
+\newcommand{\Th}{\Theta\par}
+
 % Decision Problems
 \newcommand{\YES}{\text{YES}}
 \newcommand{\NO}{\text{NO}}
@@ -266,7 +281,12 @@ $$
 \newcommand{\reducesto}[1][]{\leq_{#1}}
 \newcommand{\P}{\text{P}}
 \newcommand{\NP}{\text{NP}}
-\newcommand{\SAT}{\text{SAT}}
+\newcommand{\complete}[1]{\text{\(#1\)-complete}}
+\newcommand{\SAT}[1]{\text{\(#1\)-SAT}}
+\newcommand{\HamPath}{\text{Ham-Path}}
+
+% Numerical Methods
+\newcommand{\LTE}{{LTE}}
 
 
 % LOGIC ========================================================================
@@ -274,13 +294,13 @@ $$
 % Values
 \newcommand{\true}{\text{true}}
 \newcommand{\True}{\text{True}}
-\newcommand{\TRUE}{\text{True}}
+\newcommand{\TRUE}{\text{TRUE}}
 \newcommand{\false}{\text{false}}
 \newcommand{\False}{\text{False}}
 \newcommand{\FALSE}{\text{FALSE}}
 
 % Operators
-\newcommand{\AND}{\land}
-\newcommand{\OR}{\lor}
-\newcommand{\NOT}{\lnot}
+\newcommand{\AND}{\and}
+\newcommand{\OR}{\or}
+\newcommand{\NOT}{\neg}
 $$
