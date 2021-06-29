@@ -1,4 +1,3 @@
-$$
 % LaTeX UTILITIES ==============================================================
 
 % Left/Right -------------------------------------------------------------------
@@ -19,8 +18,10 @@ $$
 
 % Functions --------------------------------------------------------------------
 \newcommand{\par}[1]{\mathopen{} \pr{ #1 } \mathclose{}} % PARameter
+\newcommand{\sqpar}[1]{\mathopen{} \sq { #1 } \mathclose{}}
 \newcommand{\func}[2][]{\operatorname{ #2 }_{ #1 }\,}
 \newcommand{\parfunc}[2][]{\operatorname{ #2 }_{ #1 }\par}
+\newcommand{\sqparfunc}[2][]{\operatorname{ #2 }\_{ #1 }\sqpar}
 
 % Aligned ----------------------------------------------------------------------
 \newcommand{\align}[1]{\begin{aligned} #1 \end{aligned}}
@@ -29,18 +30,18 @@ $$
 \newcommand{\cases}[1]{\begin{cases} #1 \end{cases}}
 \newcommand{\if}[1]{\text{if \( #1 \)}}
 \newcommand{\otherwise}{\text{otherwise}}
-    \newcommand{\ow}{\otherwise}
+\newcommand{\ow}{\otherwise}
+\newcommand{\since}[1]{\text{since \( #1 \)}}
 
 % Slash Fraction ---------------------------------------------------------------
 \newcommand{\flac}[2]{\left. #1 \middle/ #2 \right.}
-
 
 % GENERAL UTILITIES ============================================================
 
 % Left/Right aliases -----------------------------------------------------------
 \newcommand{\tuple}{\pr}
 \newcommand{\array}{\sq}
-    \newcommand{\arr}{\sq}
+\newcommand{\arr}{\sq}
 \newcommand{\set}{\cb}
 \newcommand{\abs}{\vv}
 \newcommand{\size}{\vv}
@@ -49,29 +50,27 @@ $$
 \newcommand{\length}{\VV}
 \newcommand{\floor}{\fl}
 \newcommand{\ceiling}{\cl}
-    \newcommand{\ceil}{\cl}
+\newcommand{\ceil}{\cl}
 
 % Miscellaneous ----------------------------------------------------------------
 \newcommand{\defequals}{\mathrel{\mathop:}=}
-    \newcommand{\defeq}{\defequals}
-    \newcommand{\deq}{\defequals}
+\newcommand{\defeq}{\defequals}
+\newcommand{\deq}{\defequals}
 \newcommand{\pair}[2]{\tuple{ #1 , #2 }}
 \newcommand{\range}[2]{{ #1 }\,{..}\,{ #2 }}
 \newcommand{\index}[1]{\mathopen{} \sq{ #1 } \mathclose{}}
-    \newcommand{\idx}{\index}
+\newcommand{\idx}{\index}
 \newcommand{\divides}{\mid}
-
 
 % COMPLEX NUMBERS ==============================================================
 
 % Miscellaneous ----------------------------------------------------------------
 \newcommand{\conjugate}[1]{\overline{#1}}
-    \newcommand{\conj}{\conjugate}
+\newcommand{\conj}{\conjugate}
 \newcommand{\Realpart}[1][]{\parfunc[#1]{Re}}
-    \newcommand{\Re}{\Realpart}
+\newcommand{\Re}{\Realpart}
 \newcommand{\Imaginarypart}[1][]{\parfunc[#1]{Im}}
-    \newcommand{\Im}{\Imaginarypart}
-
+\newcommand{\Im}{\Imaginarypart}
 
 % FLOATING POINT ===============================================================
 
@@ -79,20 +78,19 @@ $$
 \newcommand{\float}{{fl}\par}
     % \newcommand{\fl}{\float} name conflict with floor
 \newcommand{\repeat}[1]{\overline{ #1 }}
-    \newcommand{\rep}{\repeat}
-\newcommand{\machineepsilon}{\epsilon_{\mathit{mach}}}
-    \newcommand{\emach}{\machineepsilon}
+\newcommand{\rep}{\repeat}
+\newcommand{\machineepsilon}{\epsilon\_{\mathit{mach}}}
+\newcommand{\emach}{\machineepsilon}
 
 % Operators --------------------------------------------------------------------
 \newcommand{\fplus}{\oplus}
-    \newcommand{\fadd}{\fplus}
+\newcommand{\fadd}{\fplus}
 \newcommand{\fminus}{\ominus}
-    \newcommand{\fsub}{\fminus}
+\newcommand{\fsub}{\fminus}
 \newcommand{\ftimes}{\otimes}
-    \newcommand{\fmul}{\ftimes}
+\newcommand{\fmul}{\ftimes}
 \newcommand{\fdivide}{\oslash}
-    \newcommand{\fdiv}{\fdivide}
-
+\newcommand{\fdiv}{\fdivide}
 
 % SETS =========================================================================
 
@@ -101,19 +99,19 @@ $$
 
 % Common sets ------------------------------------------------------------------
 \newcommand{\Naturals}{\mathbb{N}}
-    \newcommand{\Nats}{\Naturals}
-    \newcommand{\N}{\Naturals}
+\newcommand{\Nats}{\Naturals}
+\newcommand{\N}{\Naturals}
 \newcommand{\Integers}{\mathbb{Z}}
-    \newcommand{\Ints}{\Integers}
-    \newcommand{\Z}{\Integers}
+\newcommand{\Ints}{\Integers}
+\newcommand{\Z}{\Integers}
 \newcommand{\Reals}{\mathbb{R}}
-    \newcommand{\R}{\Reals}
+\newcommand{\R}{\Reals}
 \newcommand{\Complex}{\mathbb{C}}
-    \newcommand{\C}{\Complex}
-\newcommand{\Polynomials}[2]{P_{ #1 }\par{ #2 }}
-    \newcommand{\Nomials}{\Polynomials}
-\newcommand{\Matrices}[3]{M_{ #1 , #2 }\par{ #3 }}
-    \newcommand{\Mats}{\Matrices}
+\newcommand{\C}{\Complex}
+\newcommand{\Polynomials}[2]{P*{ #1 }\par{ #2 }}
+\newcommand{\Nomials}{\Polynomials}
+\newcommand{\Matrices}[3]{M*{ #1 , #2 }\par{ #3 }}
+\newcommand{\Mats}{\Matrices}
 
 % Intervals --------------------------------------------------------------------
 \newcommand{\cc}[2]{\left[ #1 , #2 \right]} % Closed-Closed
@@ -127,8 +125,7 @@ $$
 \newcommand{\intersect}{\cap}
 \newcommand{\Intersect}{\bigcap}
 \newcommand{\directsum}{\oplus}
-    \newcommand{\dsum}{\directsum}
-
+\newcommand{\dsum}{\directsum}
 
 % LINEAR ALGEBRA ===============================================================
 
@@ -139,62 +136,62 @@ $$
 
 % Matrices ---------------------------------------------------------------------
 \newcommand{\matrix}[1]{{\begin{bmatrix} #1 \end{bmatrix}}}
-    \newcommand{\mat}{\matrix}
+\newcommand{\mat}{\matrix}
 \newcommand{\vector}{\matrix}
-    \newcommand{\vect}{\vector}
+\newcommand{\vect}{\vector}
 \newcommand{\diagonal}[1][]{\parfunc[#1]{diag}}
-    \newcommand{\diag}{\diagonal}
+\newcommand{\diag}{\diagonal}
 \newcommand{\trace}[1][]{\parfunc[#1]{tr}}
-    \newcommand{\tr}{\trace}
+\newcommand{\tr}{\trace}
 \newcommand{\inverse}[1]{#1^{-1}}
-    \newcommand{\inv}{\inverse}
+\newcommand{\inv}{\inverse}
 \newcommand{\transpose}[1]{#1^{T}}
-    \newcommand{\trans}{\transpose}
-\newcommand{\conjtrans}[1]{#1^{*}}
-	\newcommand{\conjt}{\conjtrans}
-	\newcommand{\ctrans}{\conjtrans}
-	\newcommand{\ct}{\conjtrans}
+\newcommand{\trans}{\transpose}
+\newcommand{\conjtrans}[1]{#1^{\*}}
+\newcommand{\conjt}{\conjtrans}
+\newcommand{\ctrans}{\conjtrans}
+\newcommand{\ct}{\conjtrans}
 
 % Matrix subspaces -------------------------------------------------------------
 \newcommand{\Columnspace}[1][]{\parfunc[#1]{Col}}
-    \newcommand{\Colspace}{\Columnspace}
-    \newcommand{\Col}{\Columnspace}
+\newcommand{\Colspace}{\Columnspace}
+\newcommand{\Col}{\Columnspace}
 \newcommand{\Rowspace}[1][]{\parfunc[#1]{Row}}
-    \newcommand{\Row}{\Rowspace}
+\newcommand{\Row}{\Rowspace}
 \newcommand{\Nullspace}[1][]{\parfunc[#1]{Null}}
-    \newcommand{\Null}{\Nullspace}
+\newcommand{\Null}{\Nullspace}
 \newcommand{\LNullspace}[2][]{\Nullspace[#1]{\trans{ #2 }}}
-    \newcommand{\LNull}{\LNullspace}
+\newcommand{\LNull}{\LNullspace}
 
 % Linear mappings --------------------------------------------------------------
 \newcommand{\Range}[1][]{\parfunc[#1]{Range}}
 \newcommand{\Kernel}[1][]{\parfunc[#1]{Ker}}
-    \newcommand{\Ker}{\Kernel}
+\newcommand{\Ker}{\Kernel}
 \newcommand{\nullity}[1][]{\parfunc[#1]{nullity}}
 
 % Coordinates ------------------------------------------------------------------
 \newcommand{\coordinates}[2]{\matrix{ #1 }_{ #2 }}
-    \newcommand{\coords}{\coordinates}
+\newcommand{\coords}{\coordinates}
 \newcommand{\changecoordinates}[2]{\lsub{P}{ #1 }_{ #2 }}
-    \newcommand{\coc}{\changecoordinates}
+\newcommand{\coc}{\changecoordinates}
 % matrix of #2 w.r.t. bases #3 and #1
 \newcommand{\mapmatrix}[3]{\lsub{\matrix{ #2 }}{ #1 }_{ #3 }}
-    \newcommand{\mapmat}{\mapmatrix}
+\newcommand{\mapmat}{\mapmatrix}
 \newcommand{\bmatrix}[2]{{\mat{ #1 }_{ #2 }}}
-    \newcommand{\bmat}{\bmatrix}
+\newcommand{\bmat}{\bmatrix}
 
 % Inner products ---------------------------------------------------------------
 \newcommand{\innerproduct}[2]{\ag{ #1 , #2 }}
-    \newcommand{\innerprod}{\innerproduct}
-    \newcommand{\iprod}{\innerproduct}
+\newcommand{\innerprod}{\innerproduct}
+\newcommand{\iprod}{\innerproduct}
 \newcommand{\projection}[1]{\parfunc[#1]{proj}}
-    \newcommand{\proj}{\projection}
+\newcommand{\proj}{\projection}
 \newcommand{\perpendicular}[1]{\parfunc[#1]{perp}}
-    \newcommand{\perp}{\perpendicular}
+\newcommand{\perp}{\perpendicular}
 \newcommand{\orthogonalcomplement}[1]{{ #1 }^{\bot}}
-    \newcommand{\orthocomplement}{\orthogonalcomplement}
-    \newcommand{\orthocomp}{\orthogonalcomplement}
-    \newcommand{\ocomp}{\orthogonalcomplement}
+\newcommand{\orthocomplement}{\orthogonalcomplement}
+\newcommand{\orthocomp}{\orthogonalcomplement}
+\newcommand{\ocomp}{\orthogonalcomplement}
 
 % Common linear algebra variables ----------------------------------------------
 \newcommand{\B}{\mathcal{B}}
@@ -212,18 +209,17 @@ $$
 \newcommand{\z}{\vec{z}}
 \newcommand{\zero}{\vec{0}}
 
-
 % CALCULUS =====================================================================
 
 % Derivative notations
 \newcommand{\dd}[3][]{\frac{d^{#1} {#2}}{d {#3}^{#1}}}
-\newcommand{\pdd}[3][]{\frac{\delta^{#1} {#2}}{\delta {#3}^{#1}}}
+\newcommand{\pdd}[3][]{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}
 \newcommand{\prm}{^\prime}
 \newcommand{\pprm}{^{\prime\prime}}
 
 % Logarithms
 \newcommand{\lnp}{\ln\par}
-\newcommand{\logp}[1][]{\log_{#1}\par}
+\newcommand{\logp}[1][]{\log\_{#1}\par}
 
 % Trigonometry
 \newcommand{\cosp}[1][]{\cos^{#1}\par}
@@ -233,7 +229,6 @@ $$
 \newcommand{\cscp}[1][]{\csc^{#1}\par}
 \newcommand{\cotp}[1][]{\cot^{#1}\par}
 
-
 % GRAPHS =======================================================================
 
 % Notation
@@ -242,13 +237,13 @@ $$
 
 % Vertices
 \newcommand{\degree}[1][]{\parfunc[#1]{deg}}
-    \newcommand{\deg}{\degree}
+\newcommand{\deg}{\degree}
 \newcommand{\indegree}[1][]{\parfunc[#1]{indegree}}
-    \newcommand{\indeg}{\indegree}
-    \newcommand{\ideg}{\indegree}
+\newcommand{\indeg}{\indegree}
+\newcommand{\ideg}{\indegree}
 \newcommand{\outdegree}[1][]{\parfunc[#1]{outdegree}}
-    \newcommand{\outdeg}{\outdegree}
-    \newcommand{\odeg}{\outdegree}
+\newcommand{\outdeg}{\outdegree}
+\newcommand{\odeg}{\outdegree}
 
 % Trees
 \newcommand{\BFS}[1][]{\parfunc[#1]{BFS}}
@@ -261,8 +256,7 @@ $$
 
 % Paths
 \newcommand{\distance}[2]{d\par{ #1 , #2 }}
-	\newcommand{\dist}{\distance}
-
+\newcommand{\dist}{\distance}
 
 % ALGORITHMS ===================================================================
 
@@ -278,7 +272,7 @@ $$
 \newcommand{\NO}{\text{NO}}
 
 % Complexity Classes
-\newcommand{\reducesto}[1][]{\leq_{#1}}
+\newcommand{\reducesto}[1][]{\leq\_{#1}}
 \newcommand{\P}{\text{P}}
 \newcommand{\NP}{\text{NP}}
 \newcommand{\complete}[1]{\text{\(#1\)-complete}}
@@ -287,7 +281,6 @@ $$
 
 % Numerical Methods
 \newcommand{\LTE}{{LTE}}
-
 
 % LOGIC ========================================================================
 
@@ -303,4 +296,87 @@ $$
 \newcommand{\AND}{\and}
 \newcommand{\OR}{\or}
 \newcommand{\NOT}{\neg}
-$$
+
+% RELATIONAL DATABASES =========================================================
+
+% Syntax
+\newcommand{\attribute}[1]{\textit{#1}}
+\newcommand{\attr}{\attribute}
+\newcommand{\relation}[1]{\texttt{#1}}
+\newcommand{\reln}{\relation}
+\newcommand{\string}[1]{\text{“#1”}}
+\newcommand{\str}{\string}
+
+% Core Operators
+\newcommand{\SELECTION}[1]{\sigma*{ #1 }\par}
+\newcommand{\SELECT}{\SELECTION}
+\newcommand{\PROJECTION}[1]{\pi*{ #1 }\par}
+\newcommand{\PROJECT}{\PROJECTION}
+\newcommand{\CROSSPRODUCT}{\times}
+\newcommand{\CROSSPROD}{\CROSSPRODUCT}
+\newcommand{\CROSS}{\CROSSPRODUCT}
+\newcommand{\UNION}{\cup}
+\newcommand{\DIFFERENCE}{-}
+\newcommand{\DIFF}{\DIFFERENCE}
+\newcommand{\RENAMING}[1]{\rho\_{ #1 }\par}
+\newcommand{\RENAME}{\RENAMING}
+
+% Derived Operators
+\newcommand{\JOIN}[1]{\bowtie\_{ #1 }}
+\newcommand{\NATURALJOIN}{\JOIN{}}
+\newcommand{\INTERSECTION}{\cap}
+\newcommand{\INTERSECT}{\INTERSECTION}
+
+% STAT 333
+
+\newcommand{\at}[2]{\left. { #2 } \right\rvert*{ #1 }}
+\newcommand{\between}[3]{\left. { #3 } \right\rvert*{ #1 }^{ #2 }}
+
+% Utilities
+\newcommand{\FOLLOWS}{\sim}
+\newcommand{\GIVEN}{\vert}
+\newcommand{\cdf}[1][\,]{F*{#1}\!\par}
+\newcommand{\pmf}[1][\,]{p*{#1}\!\par}
+\newcommand{\pdf}[1][\,]{f*{#1}\!\par}
+\newcommand{\mgf}[1][\,]{\phi*{#1}\!\par}
+\newcommand{\dmgf}[2][]{\phi*{#1}^{\pr{#2}}\!\par}
+\newcommand{\pgf}[1][\,]{\psi*{#1}\!\par}
+\newcommand{\dpgf}[1][]{\psi\prm*{#1}\!\par}
+\newcommand{\ddpgf}[1][]{\psi\pprm*{#1}\!\par}
+\newcommand{\Var}{\parfunc{Var}}
+\newcommand{\E}{\sqparfunc{E}}
+\newcommand{\P}{\parfunc{P}}
+
+% Discrete Distribution Names
+\newcommand{\DU}[1][]{\parfunc[#1]{DU}}
+\newcommand{\BIN}[1][]{\parfunc[#1]{BIN}}
+\newcommand{\BERN}[1][]{\parfunc[#1]{BERN}}
+\newcommand{\HG}[1][]{\parfunc[#1]{HG}}
+\newcommand{\POI}[1][]{\parfunc[#1]{POI}}
+\newcommand{\NB}[1][]{\parfunc[#1]{NB}}
+\newcommand{\GEO}[1][]{\parfunc[#1]{GEO}}
+
+% Continuous Distribution Names
+\newcommand{\U}[1][]{\parfunc[#1]{U}}
+\newcommand{\Beta}[1][]{\parfunc[#1]{Beta}}
+\newcommand{\Erlang}[1][]{\parfunc[#1]{Erlang}}
+\newcommand{\EXP}[1][]{\parfunc[#1]{EXP}}
+
+% Discrete-Time Markov Chains
+\newcommand{\prv}[1][]{\underline{\alpha}_{#1}}
+\newcommand{\period}[1][]{d_{#1}\par}
+\newcommand{\communicates}{\leftrightarrow}
+
+\newcommand{\gcdp}[1][]{\gcd*{#1}\par}
+\newcommand{\vp}[2]{f*{#1,#2}}
+\newcommand{\fvp}[3]{\vp{#1}{#2}^{\pr{#3}}}
+\newcommand{\tp}[2]{P\_{#1,#2}}
+\newcommand{\tpn}[3]{\tp{#1}{#2}^{\pr{#3}}}
+
+% STAT 330 Overrides
+
+% \newcommand{\pmf}[1][\,]{f*{#1}\!\par}
+% \newcommand{\mgf}[1][\,]{M*{#1}\!\par}
+% \newcommand{\dmgf}[2][]{M\_{#1}^{\pr{#2}}\!\par}
+
+% \newcommand{\Bernoulli}[1][]{\parfunc[#1]{Bernoulli}}

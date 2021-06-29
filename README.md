@@ -1,14 +1,28 @@
-# Typora LaTeX Copypasta
+# LaTeX Copypasta
 
-This term I switched to writing notes and assignments in Markdown (Typora). It has the benefit over pure LaTeX of being mostly WYSIWYG while still supporting math and code blocks. Another great thing about Typora is that it supports `\newcommand`. Any commands defined at the top of the document can be reused throughout.
+I write my notes and assignments in Markdown using Typora. Typora has the benefit over pure LaTeX of being mostly WYSIWYG while still supporting math and code blocks. Typora also happens to support macro definitions via `\newcommand`. Any commands defined at the top of the document can be reused throughout.
 
-I'm slowly amassing a huge list of course-related commands that make it faster to type notes and assignments without worrying about typesetting. [`copypasta.md`](https://raw.githubusercontent.com/xujustinj/Typora-LaTeX-Copypasta/main/copypasta.md) contains all the commands I have so far, wrapped in a single math block that can be nestled invisibly at the top of any document. Use it as a template for starting new note and assignment documents.
+I'm slowly amassing lists of course-related LaTeX macro definitions that make it faster to type notes and assignments without worrying about typesetting. Simply copy the relevant copypastas into a single multiline equation block (surrounded by `$$`) at the top of the document.
 
-This copypasta currently supports the following University of Waterloo courses:
+This repo contains copypastas for the following University of Waterloo courses:
 
-* MATH 235 - Linear Algebra 2 (online, fall 2020)
-* CS 341 - Algorithms (online, fall 2020)
-* CS 370 - Numerical Computation (online, fall 2020)
+- MATH 235 - Linear Algebra 2 (online, fall 2020)
+- CS 341 - Algorithms (online, fall 2020)
+- CS 370 - Numerical Computation (online, fall 2020)
+- STAT 330 - Mathematical Statistics (online, spring 2021)
+- STAT 333 - Applied Probability (online, spring 2021)
+
+> STAT 330 and STAT 333 are incompatible, so an upcoming TODO is to split the monolithic copypasta into multiple files.
+
+# Example
+
+```
+% without macros
+\left\lbrace \left\lfloor e^x \right\rfloor \ \middle|\  x \in \Z \right\rbrace
+
+% with macros
+\set{ \floor{e^x} \where x \in \Z }
+```
 
 # FAQ
 
