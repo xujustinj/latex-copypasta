@@ -1,0 +1,35 @@
+% GRAPHS =======================================================================
+
+% Notation ---------------------------------------------------------------------
+
+\newcommand{\edge}{\pair}
+\newcommand{\graph}{\pair}
+
+% Degrees ----------------------------------------------------------------------
+
+\newcommand{\degree}[1][]{\fnpr{\deg_{ #1 }}}
+    % \deg is reserved
+\newcommand{\indegree}[1][]{\fnpr{\op{indegree}_{ #1 }}}
+    \newcommand{\indeg}{\indegree}
+    \newcommand{\ideg}{\indegree}
+\newcommand{\outdegree}[1][]{\fnpr{\op{outdegree}_{ #1 }}}
+    \newcommand{\outdeg}{\outdegree}
+    \newcommand{\odeg}{\outdegree}
+
+% Trees ------------------------------------------------------------------------
+
+\newcommand{\BreadthFirstSearch}[1][]{\fnpr{\op{BFS}_{#1}}}
+    \newcommand{\BFS}{\BreadthFirstSearch}
+\newcommand{\DepthFirstSearch}[1][]{\fnpr{\op{DFS}_{#1}}}
+    \newcommand{\DFS}{\DepthFirstSearch}
+\newcommand{\level}[1][]{\fnpr{\op{level}_{#1}}}
+\newcommand{\parent}[1][]{\fnpr{\op{parent}_{#1}}}
+
+% Weighted Graphs --------------------------------------------------------------
+
+\newcommand{\weight}{\fnpr{w}}
+
+% Paths ------------------------------------------------------------------------
+
+\newcommand{\distance}[2]{\fnpr{d}{ #1 , #2 }}
+    \newcommand{\dist}{\distance}

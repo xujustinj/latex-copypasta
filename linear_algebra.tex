@@ -1,0 +1,72 @@
+% LINEAR ALGEBRA ===============================================================
+
+% Bases ------------------------------------------------------------------------
+\newcommand{\Span}{\fn{\op{Span}}}
+\newcommand{\rank}{\fnpr{\op{rank}}}
+\newcommand{\dimension}{\fnpr{\dim}}
+    % \dim is built-in
+
+% Matrices ---------------------------------------------------------------------
+
+\newcommand{\diagonal}{\fnpr{\op{diag}}}
+    \newcommand{\diag}{\diagonal}
+\newcommand{\trace}{\fnpr{\op{tr}}}
+    \newcommand{\tr}{\trace}
+\newcommand{\inverse}[1]{#1^{-1}}
+    \newcommand{\inv}{\inverse}
+\newcommand{\transpose}[1]{#1^{T}}
+    \newcommand{\trans}{\transpose}
+\newcommand{\conjtrans}[1]{#1^{\*}}
+    \newcommand{\conjt}{\conjtrans}
+    \newcommand{\ctrans}{\conjtrans}
+    \newcommand{\ct}{\conjtrans}
+
+% Matrix subspaces -------------------------------------------------------------
+
+\newcommand{\Columnspace}{\fnpr{\op{Col}}}
+    \newcommand{\Colspace}{\Columnspace}
+    \newcommand{\Col}{\Columnspace}
+\newcommand{\Rowspace}{\fnpr{\op{Row}}}
+    \newcommand{\Row}{\Rowspace}
+\newcommand{\Nullspace}{\fnpr{\op{Null}}}
+    \newcommand{\Null}{\Nullspace}
+\newcommand{\LNullspace}[1]{\Nullspace{\trans{ #1 }}}
+    \newcommand{\LNull}{\LNullspace}
+
+% Linear mappings --------------------------------------------------------------
+
+\newcommand{\Range}{\fnpr{\op{Range}}}
+\newcommand{\Kernel}{\fnpr{\op{Ker}}}
+    \newcommand{\Ker}{\Kernel}
+\newcommand{\nullity}{\fnpr{\op{nullity}}}
+
+% Coordinates ------------------------------------------------------------------
+
+\newcommand{\coordinates}[2]{{\mat{ #1 }_{ #2 }}}
+    \newcommand{\coords}{\coordinates}
+\newcommand{\changecoordinates}[2]{\lsub{P}{ #1 }_{ #2 }}
+    \newcommand{\coc}{\changecoordinates}
+
+% matrix of #2 w.r.t. bases #3 and #1
+\newcommand{\mapmatrix}[3]{\lsub{\mat{ #2 }}{ #1 }_{ #3 }}
+    \newcommand{\mapmat}{\mapmatrix}
+\newcommand{\bmatrix}[2]{{\mat{ #1 }_{ #2 }}}
+    \newcommand{\bmat}{\bmatrix}
+
+% Inner Products ---------------------------------------------------------------
+
+\newcommand{\innerproduct}[2]{\ag{ #1 , #2 }}
+    \newcommand{\innerprod}{\innerproduct}
+    \newcommand{\iprod}{\innerproduct}
+\newcommand{\projection}[1]{\fnpr{\op{proj}_{#1}}}
+    \newcommand{\proj}{\projection}
+\newcommand{\perpendicular}[1]{\fnpr{\op{perp}_{#1}}}
+    % \perp is reserved
+\newcommand{\orthogonalcomplement}[1]{{ #1 }^{\bot}}
+    \newcommand{\orthocomplement}{\orthogonalcomplement}
+    \newcommand{\orthocomp}{\orthogonalcomplement}
+    \newcommand{\ocomp}{\orthogonalcomplement}
+
+% Common Variables -------------------------------------------------------------
+
+\newcommand{\zero}{\vec{0}}

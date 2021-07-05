@@ -1,0 +1,51 @@
+% PROBABILITY ==================================================================
+
+% Utilities --------------------------------------------------------------------
+
+\newcommand{\follows}{\sim}
+\newcommand{\given}{\vert}
+\newcommand{\Prob}{\fn{P}}
+\newcommand{\Ex}{\fnsq{\op{E}}}
+\newcommand{\Var}{\fnpr{\op{Var}}}
+
+% Probability Distribution Functions -------------------------------------------
+
+\newcommand{\cdf}[1]{\fnpr{F_{#1}\!}} % Cumulative Distribution Function
+\newcommand{\pmf}[1]{\fnpr{p_{#1}\!}} % Probability Mass Function
+\newcommand{\pdf}[1]{\fnpr{f_{#1}\!}} % Probability Density Function
+\newcommand{\mgf}[1]{\fnpr{\phi_{#1}\!}} % Moment Generating Function
+\newcommand{\dmgf}[2]{\fnpr{\phi_{#1}^{\pr{#2}}\!}} % derivative of MGF
+\newcommand{\pgf}[2][]{\fnpr{\psi_{#2}^{#1}\!}} % Probability Generating Function
+
+% Named Distributions ----------------------------------------------------------
+
+% discrete
+\newcommand{\DU}{\fnpr{\op{DU}}} % Discrete Uniform
+\newcommand{\BIN}{\fnpr{\op{BIN}}} % BINomial
+\newcommand{\BERN}{\fnpr{\op{BERN}}} % BERNoulli
+\newcommand{\HG}{\fnpr{\op{HG}}} % HyperGeometric
+\newcommand{\POI}{\fnpr{\op{POI}}} % Poisson
+\newcommand{\NB}[1][]{\fnpr{\op{NB}_{ #1 }}} % Negative Binomial
+    \newcommand{\NBf}{\NB[f]} % Negative Binomial (Failures)
+    \newcommand{\NBt}{\NP[t]} % Negative Binomial (Trials)
+\newcommand{\GEO}[1][]{\fnpr{\op{GEO}_{ #1 }}} % GEOmetric
+    \newcommand{\GEOf}{\GEO[f]} % GEOmetric (Failures)
+    \newcommand{\GEOt}{\GEO[t]} % GEOmetric (Trials)
+
+% continuous
+\newcommand{\U}{\fnpr{\op{U}}} % Uniform
+\newcommand{\Beta}{\fnpr{\op{Beta}}} % Beta
+\newcommand{\Erlang}{\fnpr{\op{Erlang}}} % Erlang
+\newcommand{\EXP}{\fnpr{\op{EXP}}} % EXPonential
+
+% Discrete-Time Markov Chains --------------------------------------------------
+
+\newcommand{\iprv}[1][]{\underline{\alpha}_{#1}} % Initial Probability Row Vector
+\newcommand{\period}[1][]{\fnpr{d_{#1}}}
+\newcommand{\communicates}{\leftrightarrow}
+
+% associated probabilitiies
+\newcommand{\tp}[2]{P_{#1,#2}} % Transition Probability
+\newcommand{\tpn}[3]{\tp{#1}{#2}^{\pr{#3}}} % Transition Probability, n steps
+\newcommand{\vp}[2]{f_{#1,#2}} % eventual Visit Probability
+\newcommand{\fvp}[3]{\vp{#1}{#2}^{\pr{#3}}} % First Visit Probability
