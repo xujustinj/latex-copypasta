@@ -1,0 +1,39 @@
+% PROBABILITY (STAT 330) =======================================================
+
+% Utilities --------------------------------------------------------------------
+
+\newcommand{\follows}{\sim}
+\newcommand{\followsiid}{\stackrel{\text{iid}}{\sim}}
+\newcommand{\given}{\mid}
+\newcommand{\independent}{\bot}
+    \newcommand{\indep}{\independent}
+\newcommand{\Prob}{\fnpr{P}}
+\newcommand{\Ex}{\fnsq{\op{E}}}
+\newcommand{\Var}{\fnsq{\op{Var}}}
+\newcommand{\Cov}{\fnpr{\op{Cov}}}
+
+% Probability Distribution Functions -------------------------------------------
+
+\newcommand{\cdf}[1]{\fnpr{F_{#1}\!}} % Cumulative Distribution Function
+\newcommand{\pmf}[1]{\fnpr{f_{#1}\!}} % Probability Mass Function
+\newcommand{\pdf}[1]{\fnpr{f_{#1}\!}} % Probability Density Function
+\newcommand{\mgf}[1]{\fnpr{M_{#1}\!}} % Moment Generating Function
+\newcommand{\dmgf}[2]{\fnpr{M_{#1}^{\pr{#2}}\!}} % derivative of MGF
+\newcommand{\pgf}[2][]{\fnpr{\psi_{#2}^{#1}\!}} % Probability Generating Function
+
+% Named Distributions ----------------------------------------------------------
+
+% discrete
+\newcommand{\Bernoulli}{\fnpr{\op{Bernoulli}}}
+\newcommand{\Geometric}{\fnpr{\op{Geometric}}}
+\newcommand{\Poisson}{\fnpr{\op{Poisson}}}
+% TODO
+
+% continuous
+\newcommand{\Uniform}{\fnpr{\op{Uniform}}}
+\newcommand{\Normal}{\fnpr{N}}
+\newcommand{\BivariateNormal}{\fnpr{\op{BVN}}}
+	\newcommand{\BVN}{\BivariateNormal}
+\newcommand{\ChiSquared}[1]{\chi^2_{\pr{#1}}}
+	\newcommand{\ChiSq}{\ChiSquared}
+% TODO
