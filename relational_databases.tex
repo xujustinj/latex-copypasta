@@ -1,16 +1,16 @@
 % RELATIONAL DATABASES =========================================================
 
 % Syntax
-\newcommand{\attribute}[1]{\textit{#1}}
+\newcommand{\attribute}[1]{\texttt{#1}}
 \newcommand{\attr}{\attribute}
 \newcommand{\relation}[1]{\texttt{#1}}
 \newcommand{\reln}{\relation}
 \newcommand{\str}[1]{\text{“#1”}}
 
 % Core Operators
-\newcommand{\SELECTION}[1]{\sigma_{ #1 }\par}
+\newcommand{\SELECTION}[1]{\fnpr{\sigma_{ #1 }}}
 \newcommand{\SELECT}{\SELECTION}
-\newcommand{\PROJECTION}[1]{\pi_{ #1 }\par}
+\newcommand{\PROJECTION}[1]{\fnpr{\pi_{ #1 }}}
 \newcommand{\PROJECT}{\PROJECTION}
 \newcommand{\CROSSPRODUCT}{\times}
 \newcommand{\CROSSPROD}{\CROSSPRODUCT}
@@ -18,7 +18,7 @@
 \newcommand{\UNION}{\cup}
 \newcommand{\DIFFERENCE}{-}
 \newcommand{\DIFF}{\DIFFERENCE}
-\newcommand{\RENAMING}[1]{\rho_{ #1 }\par}
+\newcommand{\RENAMING}[1]{\fnpr{\rho_{ #1 }}}
 \newcommand{\RENAME}{\RENAMING}
 
 % Derived Operators
@@ -27,3 +27,7 @@
 \newcommand{\INTERSECTION}{\cap}
 \newcommand{\INTERSECT}{\INTERSECTION}
 
+% Performance Analysis
+\newcommand{\blocks}{\fnpr{B}}
+\newcommand{\low}{\fnpr{\op{low}}}
+\newcommand{\high}{\fnpr{\op{high}}}
