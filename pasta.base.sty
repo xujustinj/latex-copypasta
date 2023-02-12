@@ -3,31 +3,31 @@
 % Left/Right -------------------------------------------------------------------
 % These two-letter command names mostly come from old personal conventions.
 
-\newcommand{\pr}[1]{\left( #1 \right)} % PaRentheses
+\newcommand{\pr}[1]{\left( {#1} \right)} % PaRentheses
     \newcommand{\tuple}{\pr}
-        \newcommand{\pair}[2]{\tuple{ #1 , #2 }}
-        \newcommand{\triple}[3]{\tuple{ #1 , #2 , #3 }}
-\newcommand{\sq}[1]{\left[ #1 \right]} % SQuare brackets
+        \newcommand{\pair}[2]{\tuple{ {#1} , {#2} }}
+        \newcommand{\triple}[3]{\tuple{ {#1} , {#2} , {#3} }}
+\newcommand{\sq}[1]{\left[ {#1} \right]} % SQuare brackets
     \newcommand{\arr}{\sq}
-\newcommand{\cb}[1]{\left\lbrace #1 \right\rbrace} % Curly Braces
+\newcommand{\cb}[1]{\left\lbrace {#1} \right\rbrace} % Curly Braces
     \newcommand{\set}{\cb}
-\newcommand{\vv}[1]{\left\lvert #1 \right\rvert} % single pipes (vert vert)
+\newcommand{\vv}[1]{\left\lvert {#1} \right\rvert} % single pipes (vert vert)
     \newcommand{\abs}{\vv}
     \newcommand{\size}{\vv}
-\newcommand{\VV}[1]{\left\lVert #1 \right\rVert} % double pipes (Vert Vert)
+\newcommand{\VV}[1]{\left\lVert {#1} \right\rVert} % double pipes (Vert Vert)
     \newcommand{\norm}{\VV}
     \newcommand{\length}{\VV}
-\newcommand{\ag}[1]{\left\langle #1 \right\rangle} % AnGle brackets
-\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor} % floor function
-\newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil} % ceiling function
+\newcommand{\ag}[1]{\left\langle {#1} \right\rangle} % AnGle brackets
+\newcommand{\floor}[1]{\left\lfloor {#1} \right\rfloor} % floor function
+\newcommand{\ceiling}[1]{\left\lceil {#1} \right\rceil} % ceiling function
     \newcommand{\ceil}{\ceiling}
 
 % Left Scripts -----------------------------------------------------------------
 
-\newcommand{\lsub}[2]{{\vphantom{ #1 }}_{ #2 } #1} % sub
-\newcommand{\lsup}[2]{{\vphantom{ #1 }}^{ #2 } #1} % super
-\newcommand{\lsubp}[3]{{\vphantom{ #1 }}_{ #2 }^{ #3 } #1} % sub, super
-\newcommand{\lsupb}[3]{{\vphantom{ #1 }}^{ #2 }_{ #3 } #1} % super, sub
+\newcommand{\lsub}[2]{{\vphantom{#1}_{#2} {#1}}} % sub
+\newcommand{\lsup}[2]{{\vphantom{#1}^{#2} {#1}}} % super
+\newcommand{\lsubp}[3]{{\vphantom{#1}_{#2}^{#3} {#1}}} % sub, super
+\newcommand{\lsupb}[3]{{\vphantom{#1}^{#2}_{#3} {#1}}} % super, sub
 
 % Functions --------------------------------------------------------------------
 % The macros here are mainly used to define other macros.
@@ -35,45 +35,45 @@
 \newcommand{\op}{\operatorname}
 
 % \mathopen and \mathclose reduce padding around Left/Right blocks.
-\newcommand{\prarg}[1]{\mathopen{} \pr{ #1 } \mathclose{}}
-\newcommand{\sqarg}[1]{\mathopen{} \sq{ #1 } \mathclose{}}
-\newcommand{\cbarg}[1]{\mathopen{} \cb{ #1 } \mathclose{}}
+\newcommand{\prarg}[1]{\mathopen{} \pr{#1} \mathclose{}}
+\newcommand{\sqarg}[1]{\mathopen{} \sq{#1} \mathclose{}}
+\newcommand{\cbarg}[1]{\mathopen{} \cb{#1} \mathclose{}}
 
 % functions
-\newcommand{\fn}[1]{{ #1 }\,}
-\newcommand{\fnpr}[1]{{ #1 }\prarg}
-\newcommand{\fnsq}[1]{{ #1 }\sqarg}
-\newcommand{\fncb}[1]{{ #1 }\sqarg}
+\newcommand{\fn}[1]{{#1}\,}
+\newcommand{\fnpr}[1]{{#1}\prarg}
+\newcommand{\fnsq}[1]{{#1}\sqarg}
+\newcommand{\fncb}[1]{{#1}\sqarg}
 
 % Array Utilities --------------------------------------------------------------
 
-\newcommand{\range}[2]{{ #1 }\,{..}\,{ #2 }}
-\newcommand{\idx}[1]{\mathopen{} \sq{ #1 } \mathclose{}}
+\newcommand{\range}[2]{{#1}\,{..}\,{#2}}
+\newcommand{\idx}[1]{\mathopen{} \sq{#1} \mathclose{}}
 
 % Environments -----------------------------------------------------------------
 
 % align
-\newcommand{\ALIGN}[1]{\begin{align*} #1 \end{align*}}
-\newcommand{\ALIGNNUM}[1]{\begin{align} #1 \end{align}}
-\newcommand{\ALIGNED}[1]{\begin{aligned} #1 \end{aligned}}
-\newcommand{\SINCE}[1]{\text{since \( #1 \)}}
-\newcommand{\BECAUSE}[1]{\text{because \( #1 \)}}
+\newcommand{\ALIGN}[1]{\begin{align*} {#1} \end{align*}}
+\newcommand{\ALIGNNUM}[1]{\begin{align} {#1} \end{align}}
+\newcommand{\ALIGNED}[1]{\begin{aligned} {#1} \end{aligned}}
+\newcommand{\SINCE}[1]{\text{since \( {#1} \)}}
+\newcommand{\BECAUSE}[1]{\text{because \( {#1} \)}}
     \newcommand{\BC}{\BECAUSE}
 
 % cases
-\newcommand{\CASES}[1]{\begin{cases} #1 \end{cases}}
-\newcommand{\IF}[1]{\text{if \( #1 \)}}
-\newcommand{\WHEN}[1]{\text{when \( #1 \)}}
+\newcommand{\CASES}[1]{\begin{cases} {#1} \end{cases}}
+\newcommand{\IF}[1]{\text{if \( {#1} \)}}
+\newcommand{\WHEN}[1]{\text{when \( {#1} \)}}
 \newcommand{\OTHERWISE}{\text{otherwise}}
     \newcommand{\OW}{\OTHERWISE}
 
 % matrix/vector
-\newcommand{\mat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\mat}[1]{\begin{bmatrix} {#1} \end{bmatrix}}
     \newcommand{\vect}{\mat}
 
 % Slash Fraction ---------------------------------------------------------------
 
-\newcommand{\flac}[2]{\left. #1 \middle/ #2 \right.}
+\newcommand{\flac}[2]{\left. {#1} \middle/ {#2} \right.}
 
 % Miscellaneous ----------------------------------------------------------------
 
@@ -102,17 +102,17 @@
     \newcommand{\R}{\Reals}
 \newcommand{\Complex}{\mathbb{C}}
     % \newcommand{\C}{\Complex}
-\newcommand{\Polynomials}[2]{\fnsubpr{P}{ #1 }{ #2 }}
+\newcommand{\Polynomials}[2]{\fnsubpr{P}{#1}{#2}}
     \newcommand{\Nomials}{\Polynomials}
-\newcommand{\Matrices}[3]{\fnsubpr{M}_{ #1 , #2 }{ #3 }}
+\newcommand{\Matrices}[3]{\fnsubpr{M}_{ {#1} , {#2} }{ {#3} }}
     \newcommand{\Mats}{\Matrices}
 
 % Intervals --------------------------------------------------------------------
 
-\newcommand{\cc}[2]{\left[ #1 , #2 \right]} % Closed-Closed
-\newcommand{\co}[2]{\left[ #1 , #2 \right)} % Closed-Open
-\newcommand{\oc}[2]{\left( #1 , #2 \right]} % Open-Closed
-\newcommand{\oo}[2]{\left( #1 , #2 \right)} % Open-Open
+\newcommand{\cc}[2]{\left[ {#1} , {#2} \right]} % Closed-Closed
+\newcommand{\co}[2]{\left[ {#1} , {#2} \right)} % Closed-Open
+\newcommand{\oc}[2]{\left( {#1} , {#2} \right]} % Open-Closed
+\newcommand{\oo}[2]{\left( {#1} , {#2} \right)} % Open-Open
 
 % Set Operations ---------------------------------------------------------------
 
@@ -128,17 +128,17 @@
 
 % Derivative notations ---------------------------------------------------------
 
-\newcommand{\dd}[3][]{\frac{d^{ #1 } { #2 }}{{d { #3 }}^{ #1 }}}
-\newcommand{\pdd}[3][]{\frac{\partial^{ #1 } { #2 }}{{\partial { #3 }}^{ #1 }}}
+\newcommand{\dd}[3][]{\frac{d^{#1} {#2}}{{d {#3}}^{#1}}}
+\newcommand{\pdd}[3][]{\frac{\partial^{#1} {#2}}{{\partial {#3}}^{#1}}}
 \newcommand{\prm}{^\prime}
 \newcommand{\pprm}{^{\prime\prime}}
-\newcommand{\gradient}[2][]{\nabla_{ #1 }{ #2 }}
+\newcommand{\gradient}[2][]{\nabla_{#1}{#2}}
     \newcommand{\grad}{\gradient}
 
 % At Notation ------------------------------------------------------------------
 
-\newcommand{\at}[2]{\left. { #2 } \right\rvert_{ #1 }}
-\newcommand{\fromto}[3]{\left. { #3 } \right\rvert_{ #1 }^{ #2 }}
+\newcommand{\at}[2]{\left. {#2} \right\rvert_{#1}}
+\newcommand{\fromto}[3]{\left. {#3} \right\rvert_{#1}^{#2}}
 
 
 % NAMED FUNCTIONS ==============================================================
@@ -152,10 +152,10 @@
 \newcommand{\minc}{\fncb{\min}}
 
 % minimum argument
-\newcommand{\argmin}[1][]{\fn{\mathop{\mathrm{argmin}}_{ #1 }}}
-\newcommand{\argminp}[1][]{\fnpr{\mathop{\mathrm{argmin}}_{ #1 }}}
-\newcommand{\argmins}[1][]{\fnsq{\mathop{\mathrm{argmin}}_{ #1 }}}
-\newcommand{\argminc}[1][]{\fncb{\mathop{\mathrm{argmin}}_{ #1 }}}
+\newcommand{\argmin}[1][]{\fn{\mathop{\mathrm{argmin}}_{#1}}}
+\newcommand{\argminp}[1][]{\fnpr{\mathop{\mathrm{argmin}}_{#1}}}
+\newcommand{\argmins}[1][]{\fnsq{\mathop{\mathrm{argmin}}_{#1}}}
+\newcommand{\argminc}[1][]{\fncb{\mathop{\mathrm{argmin}}_{#1}}}
 
 % maximum
 \newcommand{\maxp}{\fnpr{\max}}
@@ -163,10 +163,10 @@
 \newcommand{\maxc}{\fncb{\max}}
 
 % maximum argument
-\newcommand{\argmax}[1][]{\fn{\mathop{\mathrm{argmax}}_{ #1 }}}
-\newcommand{\argmaxp}[1][]{\fnpr{\mathop{\mathrm{argmax}}_{ #1 }}}
-\newcommand{\argmaxs}[1][]{\fnsq{\mathop{\mathrm{argmax}}_{ #1 }}}
-\newcommand{\argmaxc}[1][]{\fncb{\mathop{\mathrm{argmax}}_{ #1 }}}
+\newcommand{\argmax}[1][]{\fn{\mathop{\mathrm{argmax}}_{#1}}}
+\newcommand{\argmaxp}[1][]{\fnpr{\mathop{\mathrm{argmax}}_{#1}}}
+\newcommand{\argmaxs}[1][]{\fnsq{\mathop{\mathrm{argmax}}_{#1}}}
+\newcommand{\argmaxc}[1][]{\fncb{\mathop{\mathrm{argmax}}_{#1}}}
 
 % Number Theory ----------------------------------------------------------------
 
@@ -177,13 +177,13 @@
 
 \newcommand{\expp}{\fnpr{\exp}}
 \newcommand{\lnp}{\fnpr{\ln}}
-\newcommand{\logp}[1][]{\fnpr{\log_{ #1 }}}
+\newcommand{\logp}[1][]{\fnpr{\log_{#1}}}
 
 % Trigonometry -----------------------------------------------------------------
 
-\newcommand{\cosp}[1][]{\fnpr{\cos^{ #1 }}}
-\newcommand{\sinp}[1][]{\fnpr{\sin^{ #1 }}}
-\newcommand{\tanp}[1][]{\fnpr{\tan^{ #1 }}}
-\newcommand{\secp}[1][]{\fnpr{\sec^{ #1 }}}
-\newcommand{\cscp}[1][]{\fnpr{\csc^{ #1 }}}
-\newcommand{\cotp}[1][]{\fnpr{\cot^{ #1 }}}
+\newcommand{\cosp}[1][]{\fnpr{\cos^{#1}}}
+\newcommand{\sinp}[1][]{\fnpr{\sin^{#1}}}
+\newcommand{\tanp}[1][]{\fnpr{\tan^{#1}}}
+\newcommand{\secp}[1][]{\fnpr{\sec^{#1}}}
+\newcommand{\cscp}[1][]{\fnpr{\csc^{#1}}}
+\newcommand{\cotp}[1][]{\fnpr{\cot^{#1}}}
