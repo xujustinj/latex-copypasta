@@ -14,7 +14,7 @@
 \newcommand{\vv}[1]{\left\lvert {#1} \right\rvert} % single pipes (vert vert)
     \newcommand{\abs}{\vv}
     \newcommand{\size}{\vv}
-\newcommand{\VV}[1]{\left\lVert {#1} \right\rVert} % double pipes (Vert Vert)
+\newcommand{\VV}[1]{\left\lVert \strut {#1} \right\rVert} % double pipes (Vert Vert)
     \newcommand{\norm}{\VV}
     \newcommand{\length}{\VV}
 \newcommand{\ag}[1]{\left\langle {#1} \right\rangle} % AnGle brackets
@@ -43,7 +43,7 @@
 \newcommand{\fn}[1]{{#1}\,}
 \newcommand{\fnpr}[1]{{#1}\prarg}
 \newcommand{\fnsq}[1]{{#1}\sqarg}
-\newcommand{\fncb}[1]{{#1}\sqarg}
+\newcommand{\fncb}[1]{{#1}\cbarg}
 
 % Array Utilities --------------------------------------------------------------
 
@@ -139,9 +139,9 @@
 % Utilities --------------------------------------------------------------------
 
 % minimum
-\newcommand{\minp}{\fnpr{\min}}
-\newcommand{\mins}{\fnsq{\min}}
-\newcommand{\minc}{\fncb{\min}}
+\newcommand{\minp}[1][]{\fnpr{\min_{#1}}}
+\newcommand{\mins}[1][]{\fnsq{\min_{#1}}}
+\newcommand{\minc}[1][]{\fncb{\min_{#1}}}
 
 % minimum argument
 \newcommand{\argmin}[1][]{\fn{\mathop{\mathrm{argmin}}_{#1}}}
@@ -150,9 +150,9 @@
 \newcommand{\argminc}[1][]{\fncb{\mathop{\mathrm{argmin}}_{#1}}}
 
 % maximum
-\newcommand{\maxp}{\fnpr{\max}}
-\newcommand{\maxs}{\fnsq{\max}}
-\newcommand{\maxc}{\fncb{\max}}
+\newcommand{\maxp}[1][]{\fnpr{\max_{#1}}}
+\newcommand{\maxs}[1][]{\fnsq{\max_{#1}}}
+\newcommand{\maxc}[1][]{\fncb{\max_{#1}}}
 
 % maximum argument
 \newcommand{\argmax}[1][]{\fn{\mathop{\mathrm{argmax}}_{#1}}}
